@@ -28,7 +28,7 @@ public class Cliente{
     @Column(name = "celular")
     private int celular;
 
-    @OneToMany(targetEntity = Mascota.class ,fetch = FetchType.LAZY)
+    @OneToMany(targetEntity = Cita.class ,fetch = FetchType.LAZY)
     @JoinColumn(name = "id_cliente")
-    private List<Mascota> mascotaList;
+    private List<Cita> citaList;
 }
