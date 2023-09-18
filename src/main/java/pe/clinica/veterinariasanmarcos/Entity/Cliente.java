@@ -28,7 +28,11 @@ public class Cliente{
     @Column(name = "celular")
     private int celular;
 
-    @OneToMany(targetEntity = Cita.class ,fetch = FetchType.LAZY)
+    @OneToMany(targetEntity = Mascota.class ,fetch = FetchType.LAZY)
     @JoinColumn(name = "id_cliente")
-    private List<Cita> citaList;
+    private List<Mascota> mascotaList;
+
+    @OneToMany(targetEntity = Boleta.class, fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_cliente")
+    private List<Boleta> boletaList;
 }
