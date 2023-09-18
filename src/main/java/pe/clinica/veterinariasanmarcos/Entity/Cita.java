@@ -15,15 +15,10 @@ import java.util.Date;
 public class Cita {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_cita")
     private long id;
 
     @Column(name = "fch_cita")
     private Date fecha;
-
-    @ManyToOne(targetEntity = Doctor.class)
-    private Doctor doctor;
-
-    @ManyToOne(targetEntity = Mascota.class)
-    private Mascota mascota;
 
 }

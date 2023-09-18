@@ -21,5 +21,6 @@ public class RazaMascota {
     private String raza;
 
     @OneToMany(targetEntity = Mascota.class, fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_raza")
     private List<Mascota> mascotaList;
 }

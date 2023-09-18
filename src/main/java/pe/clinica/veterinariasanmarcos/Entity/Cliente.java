@@ -16,6 +16,7 @@ import java.util.List;
 public class Cliente{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_cliente")
     private long id;
 
     @Column(name = "nombre")
@@ -28,5 +29,6 @@ public class Cliente{
     private int celular;
 
     @OneToMany(targetEntity = Mascota.class ,fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_cliente")
     private List<Mascota> mascotaList;
 }

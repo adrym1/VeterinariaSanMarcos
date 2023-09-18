@@ -15,6 +15,7 @@ import java.util.List;
 public class Doctor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_doctor")
     private long id;
 
     @Column(name = "nombre")
@@ -27,5 +28,6 @@ public class Doctor {
     private int celular;
 
     @OneToMany(targetEntity = Cita.class, fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_doctor")
     private List<Cita> citaList;
 }

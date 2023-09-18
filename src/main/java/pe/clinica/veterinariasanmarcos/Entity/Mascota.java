@@ -15,6 +15,7 @@ import java.util.List;
 public class Mascota {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_mascota")
     private long id;
 
     @Column(name = "nombre")
@@ -23,12 +24,7 @@ public class Mascota {
     @Column(name = "fch_nacimiento")
     private Date fch_naci;
 
-    @ManyToOne(targetEntity = RazaMascota.class)
-    private RazaMascota razaMascota;
-
-    @ManyToOne(targetEntity = Cliente.class)
-    private  Cliente cliente;
-
     @OneToMany(targetEntity = Cita.class, fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_mascota")
     private List<Cita> citaList;
 }
