@@ -13,11 +13,7 @@ import java.util.List;
 @NoArgsConstructor
 @Entity
 @Table(name="tb_cliente")
-public class Cliente{
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_cliente")
-    private long id;
+public class Cliente extends Base {
 
     @Column(name = "nombre")
     private String nombre;

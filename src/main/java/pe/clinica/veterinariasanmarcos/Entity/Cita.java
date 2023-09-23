@@ -12,11 +12,7 @@ import java.util.Date;
 @NoArgsConstructor
 @Entity
 @Table(name="tb_cita")
-public class Cita {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_cita")
-    private long id;
+public class Cita extends Base {
 
     @Column(name = "fch_cita")
     private Date fecha;

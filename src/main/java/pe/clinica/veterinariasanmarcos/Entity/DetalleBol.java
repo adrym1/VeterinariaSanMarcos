@@ -10,11 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 @Table(name="tb_detalle_boleta")
-public class DetalleBol {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_detalle")
-    private long id_detalle;
+public class DetalleBol extends Base {
 
     @Column(name = "cantidad")
     private int cantidad;

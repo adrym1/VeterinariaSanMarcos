@@ -12,11 +12,7 @@ import java.util.List;
 @NoArgsConstructor
 @Entity
 @Table(name="tb_tipo_producto")
-public class TipoProducto {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_tipo_producto")
-    private long id;
+public class TipoProducto extends Base {
 
     //Aquí puede tener: --- Alimento de mascotas(cachorros, adultos,comida especial o dietetica)
     // --- Vacunas --- Juguetes y accesorios --- productos de higiene

@@ -12,11 +12,7 @@ import java.util.List;
 @NoArgsConstructor
 @Entity
 @Table(name="tb_mascota")
-public class Mascota {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_mascota")
-    private long id;
+public class Mascota extends Base {
 
     @Column(name = "nombre")
     private String nombre;
