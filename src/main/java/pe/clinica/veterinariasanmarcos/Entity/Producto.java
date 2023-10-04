@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 
 import java.text.DecimalFormat;
 import java.util.List;
-
+/*
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -25,3 +25,4 @@ public class Producto extends Base {
     @JoinColumn(name = "id_producto")
     private List<DetalleBol> detalleBolList;
 }
+*/

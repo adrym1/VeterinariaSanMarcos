@@ -23,4 +23,8 @@ public class Mascota extends Base {
     @OneToMany(targetEntity = Cita.class, fetch = FetchType.LAZY)
     @JoinColumn(name = "id_mascota")
     private List<Cita> citaList;
+
+    @OneToMany(targetEntity = HistorialClinico.class, fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_mascota")
+    private List<HistorialClinico> historialClinicoList;
 }

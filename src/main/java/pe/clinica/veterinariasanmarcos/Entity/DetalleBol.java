@@ -12,9 +12,6 @@ import lombok.NoArgsConstructor;
 @Table(name="tb_detalle_boleta")
 public class DetalleBol extends Base {
 
-    @Column(name = "cantidad")
-    private int cantidad;
-
     @Column(name = "total")
     private double total;
 }
