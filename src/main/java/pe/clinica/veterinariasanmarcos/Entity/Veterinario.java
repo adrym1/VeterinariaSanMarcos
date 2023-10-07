@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Data
@@ -23,6 +24,15 @@ public class Veterinario extends Base {
 
     @Column(name = "celular")
     private int celular;
+
+    @Column(name = "fch_nacimiento")
+    private Date fch_naci;
+
+    @Column(name = "email")
+    private String email;
+
+    @Column(name = "direccion")
+    private String direccion;
 
     @ManyToOne(optional = false)
     @JoinColumn(name = "id_especialidad")

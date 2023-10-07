@@ -24,9 +24,6 @@ public class Cliente extends Base {
     @Column(name = "celular")
     private int celular;
 
-    @Column(name = "direccion")
-    private String direccion;
-
     @Column(name = "email")
     private String email;
 

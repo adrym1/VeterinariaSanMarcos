@@ -20,6 +20,9 @@ public class Mascota extends Base {
     @Column(name = "fch_nacimiento")
     private Date fch_naci;
 
+    @Column(name = "peso")
+    private Double peso;
+
     @OneToMany(targetEntity = Cita.class, fetch = FetchType.LAZY)
     @JoinColumn(name = "id_mascota")
     private List<Cita> citaList;
