@@ -22,10 +22,7 @@ public class Boleta extends Base {
     @JoinColumn(name = "id_boleta")
     private List<DetalleBol> detalleBolList;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    //@JoinColumn(name = "id_cita", referencedColumnName = "id")
-    @JoinTable(name = "tb_boleta_cita",
-        joinColumns = @JoinColumn(name = "id_boleta"),
-        inverseJoinColumns = @JoinColumn(name = "id_cita"))
-    private Cita cita;
+    @ManyToOne()
+    @JoinColumn(name = "id_mascota")
+    private Mascota mascota;
 }

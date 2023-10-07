@@ -34,7 +34,5 @@ public class Cliente extends Base {
     @JoinColumn(name = "id_cliente")
     private List<Mascota> mascotaList;
 
-    @OneToMany(targetEntity = Boleta.class, fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_cliente")
-    private List<Boleta> boletaList;
+
 }
