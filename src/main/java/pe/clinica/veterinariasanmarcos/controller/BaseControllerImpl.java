@@ -10,15 +10,18 @@ import org.springframework.web.bind.annotation.PutMapping;
 import pe.clinica.veterinariasanmarcos.Entity.Base;
 import pe.clinica.veterinariasanmarcos.service.BaseServiceImpl;
 
-public abstract class BaseControllerImpl<E extends Base, S extends BaseServiceImpl<E, Long>> implements BaseController<E, Long> {
+public abstract class BaseControllerImpl<E extends Base, S extends BaseServiceImpl<E, Long>>
+        implements BaseController<E, Long> {
+
     @Autowired
     protected S servicio;
+
     @GetMapping("")
     public ResponseEntity<?> getAll() {
         try {
             return ResponseEntity.status(HttpStatus.OK).body(servicio.findAll());
         } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("{\"error\":\"Se ha producido un error, por favor intentelo de nuevo o consulte al desarrollador.\"}");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("{\"error\":\"Se ha producido un enorme error csm, por favor intentelo de nuevo o consulte al desarrollador.\"}");
         }
     }
 

@@ -19,8 +19,8 @@ public abstract class BaseServiceImpl<E extends Base, ID extends Serializable> i
     @Transactional
     public List<E> findAll() throws Exception {
         try {
-            List<E> entities = baseRepository.findAll();
-            return entities;
+            List<E> entity = baseRepository.findAll();
+            return entity;
         } catch (Exception e) {
             throw new Exception(e.getMessage());
         }
@@ -49,18 +49,20 @@ public abstract class BaseServiceImpl<E extends Base, ID extends Serializable> i
     }
 
     @Override
+    @Transactional
     public E update(ID id, E entity) throws Exception {
         try {
             Optional<E> entityOptional = baseRepository.findById(id);
-            E entity2 = entityOptional.get();
-            entity2 = baseRepository.save(entity);
-            return entity2;
+            E entityUpdate = entityOptional.get();
+            entityUpdate = baseRepository.save(entity);
+            return entityUpdate;
         } catch (Exception e) {
             throw new Exception(e.getMessage());
         }
     }
 
     @Override
+    @Transactional
     public boolean delete(ID id) throws Exception {
         try {
             if (baseRepository.existsById(id)) {

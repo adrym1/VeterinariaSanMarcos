@@ -7,7 +7,9 @@ import pe.clinica.veterinariasanmarcos.Entity.Cliente;
 import pe.clinica.veterinariasanmarcos.service.ClienteServiceImpl;
 
 @RestController
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "*") //indica quien puede usar los servicios
 @RequestMapping(path = "api/clinica/clientes")
 public class ClienteController extends BaseControllerImpl<Cliente, ClienteServiceImpl> {
+
+
 }

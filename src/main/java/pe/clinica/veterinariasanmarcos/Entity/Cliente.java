@@ -27,9 +27,5 @@ public class Cliente extends Base {
     @Column(name = "email")
     private String email;
 
-    @OneToMany(targetEntity = Mascota.class ,fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_cliente")
-    private List<Mascota> mascotaList;
-
 
 }

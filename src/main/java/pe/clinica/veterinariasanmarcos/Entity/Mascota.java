@@ -30,4 +30,8 @@ public class Mascota extends Base {
     @OneToMany(targetEntity = HistorialClinico.class, fetch = FetchType.LAZY)
     @JoinColumn(name = "id_mascota")
     private List<HistorialClinico> historialClinicoList;
+
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "id_cliente")
+    private Cliente cliente;
 }

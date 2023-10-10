@@ -6,6 +6,8 @@ import pe.clinica.veterinariasanmarcos.Entity.Mascota;
 import pe.clinica.veterinariasanmarcos.repository.BaseRepository;
 import pe.clinica.veterinariasanmarcos.repository.MascotaRepository;
 
+import java.util.List;
+
 @Service
 public class MascotaServiceImpl extends BaseServiceImpl<Mascota, Long> implements MascotaService {
     //@Autowired
@@ -13,5 +15,10 @@ public class MascotaServiceImpl extends BaseServiceImpl<Mascota, Long> implement
 
     public MascotaServiceImpl(BaseRepository<Mascota, Long> baseRepository) {
         super(baseRepository);
+    }
+
+    @Override
+    public List<Mascota> findAll() throws Exception {
+        return null;
     }
 }
