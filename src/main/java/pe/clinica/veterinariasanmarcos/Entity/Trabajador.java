@@ -36,7 +36,4 @@ public class Trabajador extends Base {
     @Column(name = "clave")
     private String clave;
 
-    @OneToMany(targetEntity = Cita.class, fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_trabajador")
-    private List<Cita> citasList;
 }

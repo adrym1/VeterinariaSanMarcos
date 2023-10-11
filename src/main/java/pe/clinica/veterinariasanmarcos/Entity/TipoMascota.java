@@ -19,7 +19,4 @@ public class TipoMascota extends Base {
     @Column(name = "nom_tipo")
     private String tipo;
 
-    @OneToMany(targetEntity = Mascota.class, fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_tipo_mascota")
-    private List<Mascota> mascotaList;
 }

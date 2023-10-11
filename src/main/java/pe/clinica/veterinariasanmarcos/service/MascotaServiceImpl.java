@@ -10,15 +10,10 @@ import java.util.List;
 
 @Service
 public class MascotaServiceImpl extends BaseServiceImpl<Mascota, Long> implements MascotaService {
-    //@Autowired
+    @Autowired
     private MascotaRepository mascotaRepository;
 
     public MascotaServiceImpl(BaseRepository<Mascota, Long> baseRepository) {
         super(baseRepository);
-    }
-
-    @Override
-    public List<Mascota> findAll() throws Exception {
-        return null;
     }
 }

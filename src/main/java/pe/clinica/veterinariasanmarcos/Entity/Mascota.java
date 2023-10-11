@@ -23,9 +23,12 @@ public class Mascota extends Base {
     @Column(name = "peso")
     private Double peso;
 
-    @OneToMany(targetEntity = Cita.class, fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_mascota")
-    private List<Cita> citaList;
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "id_tipo_mascota")
+    private TipoMascota tipoMascota;
+
+    @Column(name = "Informacion")//AQUI SE DETALLA LA RAZA DE LA MASCOTA COMO INFORMACION ADICIONAL
+    private String informacion;
 
     @OneToMany(targetEntity = HistorialClinico.class, fetch = FetchType.LAZY)
     @JoinColumn(name = "id_mascota")

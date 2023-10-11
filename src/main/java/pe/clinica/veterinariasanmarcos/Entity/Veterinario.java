@@ -38,7 +38,4 @@ public class Veterinario extends Base {
     @JoinColumn(name = "id_especialidad")
     private EspecialidadVet especialidad;
 
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "id_veterinario")
-    private List<Cita> citaList;
 }
