@@ -1,8 +1,6 @@
 package pe.clinica.veterinariasanmarcos.Entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -29,4 +27,8 @@ public class HistorialClinico extends Base {
 
     @Column(name = "fecha")
     private Date fecha;
+
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "id_mascota")
+    private Mascota mascota;
 }
