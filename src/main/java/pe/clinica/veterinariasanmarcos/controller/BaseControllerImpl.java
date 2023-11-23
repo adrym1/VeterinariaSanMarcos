@@ -43,10 +43,10 @@ public abstract class BaseControllerImpl<E extends Base, S extends BaseServiceIm
         }
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<?> update(Long id, E entity) {
+    @PutMapping("")
+    public ResponseEntity<?> update(E entity) {
         try {
-            return ResponseEntity.status(HttpStatus.OK).body(servicio.update(id, entity));
+            return ResponseEntity.status(HttpStatus.OK).body(servicio.update(entity));
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("{\"error\":\"Se ha producido un error, por favor intentelo de nuevo o consulte al desarrollador.\"}");
         }

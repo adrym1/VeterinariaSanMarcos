@@ -50,12 +50,10 @@ public abstract class BaseServiceImpl<E extends Base, ID extends Serializable> i
 
     @Override
     @Transactional
-    public E update(ID id, E entity) throws Exception {
+    public E update(E entity) throws Exception {
         try {
-            Optional<E> entityOptional = baseRepository.findById(id);
-            E entityUpdate = entityOptional.get();
-            entityUpdate = baseRepository.save(entity);
-            return entityUpdate;
+            entity = baseRepository.save(entity);
+            return entity;
         } catch (Exception e) {
             throw new Exception(e.getMessage());
         }
